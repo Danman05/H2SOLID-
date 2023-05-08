@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Geometry
 {
     // Trapez class, that inherits from Shape
-    internal class Trapez : Shape
+    public class Trapez : Shape
     {
 		private double b;
 		private double c;

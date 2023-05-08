@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
+
+    // Shape class, Base class for other shapes
+
     public abstract class Shape
     {
         private double a;
@@ -21,6 +24,9 @@ namespace Geometry
             get { return name; }
             set { name = value; }
         }
+
+        // Constructor
+        // Sets values to a and name
 
         public Shape(double a, string name)
         {
