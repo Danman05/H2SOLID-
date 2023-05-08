@@ -1,56 +1,60 @@
 ﻿namespace Geometry
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
 
-            List<Shape> list = new List<Shape>();
-            List<Square> list2 = new();
+            List<Shape> shapeList = new();
 
+            Square square = new(10, "Square");
+            Parallelogram parallelogram = new(5, 15, 70, "Parallelogram");
+            Trapez trapez = new(10, 9, 8, 9, "Trapez");
+            Rectangle rectangle = new(5, 10, "Rectangle");
+            Triangle triangle = new(3, 5, "Triangle");
+
+            shapeList.Add(square);
+            shapeList.Add(parallelogram);
+            shapeList.Add(trapez);
+            shapeList.Add(rectangle);
+            shapeList.Add(triangle);
+
+            foreach (Shape shape in shapeList)
+            {
+                Console.WriteLine($"{shape.Name} perimeter: {shape.Perimeter()}\n" +
+                    $"{shape.Name} area: {shape.Area()}\n");
+
+            }
+
+            Console.ReadLine();
 
 
             // Square test
-            Square square = new(10);
-            list2.Add(square);
-            Console.WriteLine($"Square Perimeter: {square.Perimeter()}");
-            Console.WriteLine($"Square Area: {square.Area()}\n");
+
+            //Console.WriteLine($"Square Perimeter: {square.Perimeter()}");
+            //Console.WriteLine($"Square Area: {square.Area()}\n");
 
             // Parallelogram test
 
-            Parallelogram parallelogram = new(5, 15, 70);
-            list2.Add(parallelogram);
-            Console.WriteLine($"Parallelogram Perimeter: {parallelogram.Perimeter()}");
-            Console.WriteLine($"Parallelogram Area: {parallelogram.Area()}\n");
+            //Console.WriteLine($"Parallelogram Perimeter: {parallelogram.Perimeter()}");
+            //Console.WriteLine($"Parallelogram Area: {parallelogram.Area()}\n");
 
             // Trapez test
 
-            Trapez trapez = new(10, 9, 8, 9);
-            list2.Add(trapez);
-            Console.WriteLine($"Trapez Area: {trapez.Perimeter()}");
-            Console.WriteLine($"Trapez Perimeter: {trapez.Area()}\n");
+            //Console.WriteLine($"Trapez Area: {trapez.Perimeter()}");
+            //Console.WriteLine($"Trapez Perimeter: {trapez.Area()}\n");
 
 
-            // Rektangel test
+            // Rectangle test
 
-            Rektangel rektangel = new(5, 10);
-            list2.Add(rektangel);
-            Console.WriteLine($"Rektangel Perimeter: {rektangel.Perimeter()}");
-            Console.WriteLine($"Rektangel Area: {rektangel.Area()}\n");
+            //Console.WriteLine($"Rectangle Perimeter: {rectangle.Perimeter()}");
+            //Console.WriteLine($"Rectangle Area: {rectangle.Area()}\n");
 
             // Triangle test
 
-            Triangle triangle = new(3, 5);
-            list.Add(triangle);
-            Console.WriteLine($"Triangle Perimeter: {triangle.Perimeter()}");
-            Console.WriteLine($"Triangle Area: {triangle.Area()}\n");
+            //Console.WriteLine($"Triangle Perimeter: {triangle.Perimeter()}");
+            //Console.WriteLine($"Triangle Area: {triangle.Area()}\n");
 
-            foreach (var item in list2)
-            {
-                Console.WriteLine(item.Perimeter());
-                Console.WriteLine(item.Area());
-            }
-            Console.ReadLine();
         }
     }
 }

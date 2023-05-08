@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-    // Triangel class, that inherits from Shape
-    public class Triangle : Shape
+    // Rektangel class, that inherits from Shape
+    public class Rectangle : Shape
     {
         private double b;
-        private double c;
 
         public double B
         {
@@ -18,30 +17,21 @@ namespace Geometry
             set { b = value; }
         }
 
-        public double C
-        {
-            get { return c; }
-            set { c = value; }
-        }
-
         // Constructor
-        // Sets values to b and c
+        // Sets values to b
         // Passes a and name to base constructor
-        public Triangle(double a, double b, string name) : base(a, name)
+        public Rectangle(double a, double b, string name) : base(a, name)
         {
             this.b = b;
-            // Finding side c by using pythagoras
-            this.c = Math.Sqrt(Math.Pow(a,2) + Math.Pow(b,2));
         }
-
         public override double Perimeter()
         {
-            return A + b + c;
+            return A * 2 + b * 2;
         }
 
         public override double Area()
         {
-            return 0.5 * A * b;
+            return A * b;
         }
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-    public class Square
+    // Square class, that inherits from Shape
+    public class Square : Shape
     {
 
         private double a;
@@ -17,19 +18,20 @@ namespace Geometry
             set { a = value; }
         }
 
-        public Square(double a)
+        // Constructor
+        // Passes a and name to base constructor
+        public Square(double a, string name) : base(a, name)
         {
-            this.a = a;
         }
 
-        public double Perimeter()
+        public override double Perimeter()
         {
-            return A * 4;
+            return base.A * 4;
         }
 
-        public double Area()
+        public override double Area()
         {
-            return A * A;
+            return base.A * base.A;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,26 +10,27 @@ namespace Geometry
     public abstract class Shape
     {
         private double a;
-        private double b;
-
+        private string name;
         public double A
         {
             get { return a; }
             set { a = value; }
         }
-        public double B
+        public string Name
         {
-            get { return b; }
-            set { b = value; }
+            get { return name; }
+            set { name = value; }
         }
-        public Shape(double a, double b)
+
+        public Shape(double a, string name)
         {
             this.a = a;
-            this.b = b;
+            this.name = name;
         }
 
         public abstract double Perimeter();
 
         public abstract double Area();
+
     }
 }

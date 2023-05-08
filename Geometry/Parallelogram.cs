@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-    public class Parallelogram : Square
+
+    // Parallelogram class, that inherits from Shape
+    public class Parallelogram : Shape
     {
         private double b;
-        private double v;
+        private double angle;
 
-        public double V
+        public double Angle
         {
-            get { return v; }
-            set { v = value; }
+            get { return angle; }
+            set { angle = value; }
         }
 
         public double B
@@ -23,20 +25,23 @@ namespace Geometry
             set { b = value; }
         }
 
-        public Parallelogram(double a, double b, double v) : base(a)
+        // Constructor
+        // Sets values to b and v
+        // Passes a and name to base constructor
+        public Parallelogram(double a, double b, double angle, string name) : base(a, name)
         {
             this.b = b;
-            this.v = v;
+            this.angle = angle;
         }
 
-        public double Perimeter()
+        public override double Perimeter()
         {
-            return A * 2 + B * 2;
+            return A * 2 + b * 2;
         }
 
-        public double Area()
+        public override double Area()
         {
-            return A * B * Math.Sin(V);
+            return A * b * Math.Sin(angle);
         }
     }
 }
