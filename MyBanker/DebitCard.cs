@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace MyBanker
 {
     internal class DebitCard : Card
     {
+        // Card prefix
         private List<int> prefix = new List<int>
             {
                 2400,
             };
 
+        // Constructor
         public DebitCard(string cardHolderName, int age) : base(cardHolderName, age)
         {
 
@@ -21,6 +19,7 @@ namespace MyBanker
             this.accountNumber = GetAccountNumber();
         }
 
+        // String override method for output
         public override string ToString()
         {
 

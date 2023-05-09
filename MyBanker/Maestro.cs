@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace MyBanker
 {
-    internal class Maestro : Card
+    internal class Maestro : Card, IExpire
     {
+        private Random random = new Random();
+
+        private string cardNumberString = "";
+
+        private string accountNumberString = "";
+
+        // Card prefix
         private List<int> prefix = new List<int>
             {
                 5018, 
@@ -21,12 +28,34 @@ namespace MyBanker
                 6763
             };
 
+        // Implentation from interface
+        public DateTime expirydate {get; set;}
+
+        // Constructor
         public Maestro(string cardHolderName, int age) : base(cardHolderName, age)
-        { 
+        {
+            expirydate = DateTime.Now.AddYears(5).AddMonths(8);
             this.cardPrefix = GetCardPrefix(prefix);
             this.cardnumber = GetCardNumber();
             this.accountNumber = GetAccountNumber();
         }
+
+        // Overide GetCardNumber method
+        // Because the amount of numbers is different
+        // than the other cards
+        protected override string GetCardNumber()
+        {
+            cardNumberString += $"{cardPrefix}-";
+
+            for (int i = 0; i < 19 - cardPrefix.ToString().Length; i++)
+            {
+                cardNumberString += random.Next(0, 10);
+            }
+
+            return cardNumberString;
+        }
+
+        // String override method for output
 
         public override string ToString()
         {
@@ -35,7 +64,8 @@ namespace MyBanker
                 $"Name: {cardHolderName}\n" +
                 $"Age: {age}\n" +
                 $"Account number: {accountNumber}\n" +
-                $"Card number: {cardnumber}\n";
+                $"Card number: {cardnumber}\n" +
+                $"Expiry date: {expirydate.Month}-{expirydate.Year}\n";
         }
     }
 }

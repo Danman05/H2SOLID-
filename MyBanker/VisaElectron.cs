@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyBanker
 {
-    internal class VisaElectron : Card, IMaxUse
+    internal class VisaElectron : Card, IMaxUse, IExpire
     {
+        // Card prefix
+
         private List<int> prefix = new List<int>
             {
                 4026,
@@ -18,16 +20,21 @@ namespace MyBanker
                 4917
             };
 
+       // Implentation from interfaces
         public int maxUsed { get; set; }
+        public DateTime expirydate { get; set; }
 
-
+        // Constructor
         public VisaElectron(string cardHolderName, int age) : base(cardHolderName, age)
         {
             maxUsed = 10000;
+            expirydate = DateTime.Now.AddYears(5);
             this.cardPrefix = GetCardPrefix(prefix);
             this.cardnumber = GetCardNumber();
             this.accountNumber = GetAccountNumber();
         }
+
+        // String override method for output
 
         public override string ToString()
         {
@@ -37,7 +44,8 @@ namespace MyBanker
                 $"Age: {age}\n" +
                 $"Account number: {accountNumber}\n" +
                 $"Card number: {cardnumber}\n" +
-                $"Max usage: {maxUsed} kr";
+                $"Monthly spending limit: {maxUsed} kr\n" +
+                $"Expiry date: {expirydate.Month}-{expirydate.Year}\n";
 
         }
     }

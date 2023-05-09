@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace MyBanker
 {
     internal abstract class Card
     {
-        protected const int BankPrefix = 3520; // + xxxx xxxx xx;
+        // Bank prefix
+        protected const int BankPrefix = 3520;
 
+        // Card information
         protected string cardHolderName;
         protected int age;
-
         protected string cardnumber;
         protected string accountNumber;
         protected int cardPrefix;
@@ -24,12 +21,14 @@ namespace MyBanker
         private string accountNumberString = "";
 
 
+        //Constructor
         public Card(string cardHolderName, int age)
         {
             this.cardHolderName = cardHolderName;
             this.age = age;
         }
 
+        // Method generating a card number and making them into a string
         protected virtual string GetCardNumber()
         {
             cardNumberString += $"{cardPrefix}-";
@@ -41,6 +40,7 @@ namespace MyBanker
 
             return cardNumberString;
         }
+        // Method generating an account number and making them into a string
         protected virtual string GetAccountNumber()
         {
             accountNumberString += $"{BankPrefix}-";
@@ -52,12 +52,11 @@ namespace MyBanker
 
             return accountNumberString;
         }
+
+        // Picking a random card prefix
         protected virtual int GetCardPrefix(List<int> prefix)
         {
             return prefix[random.Next(0, prefix.Count)];
         }
-
-
-
     }
 }

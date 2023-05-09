@@ -1,14 +1,15 @@
-﻿using System;
-
-namespace MyBanker
+﻿namespace MyBanker
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+           
             Random random = new();
             string chosenName = "";
             int age;
+
+            // Random names produced from randomlists.com
             List<string> randomNames = new List<string>()
             {
                 "Guillermo Edwards",
@@ -33,12 +34,15 @@ namespace MyBanker
                 "Trevin Trevino"
             };
 
+            // Infinity loop to keep generating cards
             while (true)
             {
-
+                // Random name & age
                 chosenName = randomNames[random.Next(0, 20)];
                 age = random.Next(10, 120);
 
+                // Switch case to decide what card should be produced
+                // in each case there are if statements to check the age requirements for each card
                 switch (random.Next(0, 4))
                 {
                     case 0:
@@ -94,18 +98,11 @@ namespace MyBanker
                         Console.WriteLine("Hello world");
                         break;
                 }
+
+                // Slows the card production
                 Thread.Sleep(5000);
                 Console.Clear();
             }
-
-
-
-            // Card debit = new DebitCard("Emil", 16);
-            //Console.WriteLine(debit.ToString());
-
-            // Card visaElectron = new VisaElectron("Daniel", 18);
-            // Console.WriteLine(visaElectron.ToString());
-
         }
     }
 }

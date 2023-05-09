@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace MyBanker
 {
     interface IDraftDaily
     {
+        // Interface for daily withdrawl
         public int maxDaily { get; set; }
 
     }
