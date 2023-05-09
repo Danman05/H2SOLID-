@@ -18,11 +18,6 @@ namespace Geometry
             set { b = value; }
         }
 
-        public double C
-        {
-            get { return c; }
-            set { c = value; }
-        }
 
         // Constructor
         // Sets values to b and c
