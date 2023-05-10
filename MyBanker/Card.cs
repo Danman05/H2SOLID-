@@ -14,7 +14,7 @@ namespace MyBanker
         protected string? accountNumber;
         protected int cardPrefix;
 
-        private Random random = new Random();
+        private readonly Random random = new();
 
         private string cardNumberString = "";
 

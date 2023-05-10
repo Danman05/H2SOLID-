@@ -5,7 +5,7 @@ namespace MyBanker
     public class DebitCard : Card
     {
         // Card prefix
-        private List<int> prefix = new List<int>
+        private readonly List<int> prefix = new()
             {
                 2400,
             };

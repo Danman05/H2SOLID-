@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace OpenCloseCoffeeMachine
 {
     public class CoffeeMachine : Machine
@@ -16,7 +11,5 @@ namespace OpenCloseCoffeeMachine
             this.waterTank = new WaterTank();
             this.coffeeFilter = new CoffeeFilter();
         }
-
-
     }
 }
