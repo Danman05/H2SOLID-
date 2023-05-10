@@ -6,12 +6,12 @@ namespace Geometry
     public class Parallelogram : Shape
     {
         private double b;
-        private double angle;
+        private double angleInDegrees;
 
-        public double Angle
+        public double AngleInDegrees
         {
-            get { return angle; }
-            set { angle = value; }
+            get { return angleInDegrees; }
+            set { angleInDegrees = value; }
         }
 
         public double B
@@ -23,10 +23,10 @@ namespace Geometry
         // Constructor
         // Sets values to b and v
         // Passes a and name to base constructor
-        public Parallelogram(double a, double b, double angle, string name) : base(a, name)
+        public Parallelogram(double a, double b, double angleInDegrees, string name) : base(a, name)
         {
             this.b = b;
-            this.angle = angle;
+            this.angleInDegrees = angleInDegrees;
         }
 
         public override double Perimeter()
@@ -36,7 +36,7 @@ namespace Geometry
 
         public override double Area()
         {
-            return A * b * Math.Sin(angle);
+            return A * b * Math.Sin(angleInDegrees);
         }
     }
 }
