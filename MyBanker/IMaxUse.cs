@@ -2,7 +2,7 @@
 
 namespace MyBanker
 {
-    internal interface IMaxUse
+    interface IMaxUse
     {
         // Interface for max spending limit
         public int maxUsed { get; set; }

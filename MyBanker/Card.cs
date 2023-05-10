@@ -2,7 +2,7 @@
 
 namespace MyBanker
 {
-    internal abstract class Card
+    public abstract class Card
     {
         // Bank prefix
         protected const int BankPrefix = 3520;

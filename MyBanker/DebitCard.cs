@@ -2,7 +2,7 @@
 
 namespace MyBanker
 {
-    internal class DebitCard : Card
+    public class DebitCard : Card
     {
         // Card prefix
         private List<int> prefix = new List<int>

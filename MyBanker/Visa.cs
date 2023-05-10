@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyBanker
 {
-    internal class Visa : Card, IMaxDraft, IMaxUse, IExpire
+    public class Visa : Card, IMaxDraft, IMaxUse, IExpire
     {
         // Card prefix
         private List<int> prefix = new List<int>

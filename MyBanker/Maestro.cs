@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyBanker
 {
-    internal class Maestro : Card, IExpire
+    public class Maestro : Card, IExpire
     {
         private Random random = new Random();
 
