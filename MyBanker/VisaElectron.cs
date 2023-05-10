@@ -21,14 +21,14 @@ namespace MyBanker
             };
 
        // Implentation from interfaces
-        public int maxUsed { get; set; }
-        public DateTime expirydate { get; set; }
+        public int MaxUsed { get; set; }
+        public DateTime ExpiryDate { get; set; }
 
         // Constructor
         public VisaElectron(string cardHolderName, int age) : base(cardHolderName, age)
         {
-            maxUsed = 10000;
-            expirydate = DateTime.Now.AddYears(5);
+            MaxUsed = 10000;
+            ExpiryDate = DateTime.Now.AddYears(5);
             this.cardPrefix = GetCardPrefix(prefix);
             this.cardnumber = GetCardNumber();
             this.accountNumber = GetAccountNumber();
@@ -44,8 +44,8 @@ namespace MyBanker
                 $"Age: {age}\n" +
                 $"Account number: {accountNumber}\n" +
                 $"Card number: {cardnumber}\n" +
-                $"Monthly spending limit: {maxUsed} kr\n" +
-                $"Expiry date: {expirydate.Month}-{expirydate.Year}\n";
+                $"Monthly spending limit: {MaxUsed} kr\n" +
+                $"Expiry date: {ExpiryDate.Month}-{ExpiryDate.Year}\n";
 
         }
     }

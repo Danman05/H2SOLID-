@@ -41,7 +41,7 @@ namespace MyBanker
             return cardNumberString;
         }
         // Method generating an account number and making them into a string
-        protected virtual string GetAccountNumber()
+        protected string GetAccountNumber()
         {
             accountNumberString += $"{BankPrefix}-";
 
@@ -54,7 +54,7 @@ namespace MyBanker
         }
 
         // Picking a random card prefix
-        protected virtual int GetCardPrefix(List<int> prefix)
+        protected int GetCardPrefix(List<int> prefix)
         {
             return prefix[random.Next(0, prefix.Count)];
         }

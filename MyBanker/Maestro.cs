@@ -8,14 +8,12 @@ namespace MyBanker
 {
     public class Maestro : Card, IExpire
     {
-        private Random random = new Random();
+        private Random random = new();
 
         private string cardNumberString = "";
 
-        private string accountNumberString = "";
-
         // Card prefix
-        private List<int> prefix = new List<int>
+        private List<int> prefix = new()
             {
                 5018, 
                 5020,
@@ -29,12 +27,12 @@ namespace MyBanker
             };
 
         // Implentation from interface
-        public DateTime expirydate {get; set;}
+        public DateTime ExpiryDate {get; set;}
 
         // Constructor
         public Maestro(string cardHolderName, int age) : base(cardHolderName, age)
         {
-            expirydate = DateTime.Now.AddYears(5).AddMonths(8);
+            ExpiryDate = DateTime.Now.AddYears(5).AddMonths(8);
             this.cardPrefix = GetCardPrefix(prefix);
             this.cardnumber = GetCardNumber();
             this.accountNumber = GetAccountNumber();
@@ -56,16 +54,14 @@ namespace MyBanker
         }
 
         // String override method for output
-
         public override string ToString()
         {
-
             return $"Card type: {GetType().Name}\n" +
                 $"Name: {cardHolderName}\n" +
                 $"Age: {age}\n" +
                 $"Account number: {accountNumber}\n" +
                 $"Card number: {cardnumber}\n" +
-                $"Expiry date: {expirydate.Month}-{expirydate.Year}\n";
+                $"Expiry date: {ExpiryDate.Month}-{ExpiryDate.Year}\n";
         }
     }
 }

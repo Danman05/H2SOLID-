@@ -18,18 +18,18 @@ namespace MyBanker
                 55
             };
         // Valueables from implemented interfaces
-        public int maxMonthly { get ; set; }
-        public int maxDaily { get ; set; }
-        public DateTime expirydate { get; set; }
-        public int credit { get; set; }
+        public int MaxMonthly { get ; set; }
+        public int MaxDaily { get ; set; }
+        public DateTime ExpiryDate { get; set; }
+        public int Credit { get; set; }
 
         // Constructor
         public Mastercard(string cardHolderName, int age) : base(cardHolderName, age)
         {
-            credit = 40000;
-            expirydate = DateTime.Now.AddYears(5);
-            maxDaily = 5000;
-            maxMonthly = 30000;
+            Credit = 40000;
+            ExpiryDate = DateTime.Now.AddYears(5);
+            MaxDaily = 5000;
+            MaxMonthly = 30000;
             this.cardPrefix = GetCardPrefix(prefix);
             this.cardnumber = GetCardNumber();
             this.accountNumber = GetAccountNumber();
@@ -44,10 +44,10 @@ namespace MyBanker
                 $"Age: {age}\n" +
                 $"Account number: {accountNumber}\n" +
                 $"Card number: {cardnumber}\n" +
-                $"Max Daily Withdraw Limit {maxDaily} kr \n" +
-                $"Max Monthly Withdraw Limit {maxMonthly} kr \n" +
-                $"Max Monthly Credit {credit} kr \n" +
-                $"Expiry date: {expirydate.Month}-{expirydate.Year}\n";
+                $"Max Daily Withdraw Limit {MaxDaily} kr \n" +
+                $"Max Monthly Withdraw Limit {MaxMonthly} kr \n" +
+                $"Max Monthly Credit {Credit} kr \n" +
+                $"Expiry date: {ExpiryDate.Month}-{ExpiryDate.Year}\n";
         }
     }
 }
