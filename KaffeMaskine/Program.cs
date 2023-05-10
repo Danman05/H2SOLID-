@@ -1,4 +1,4 @@
-﻿namespace KaffeMaskine
+﻿namespace O
 {
     internal class Program
     {
