@@ -1,4 +1,6 @@
-﻿namespace Geometry
+﻿
+
+namespace Geometry
 {
     public class Program
     {
