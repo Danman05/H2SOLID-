@@ -29,34 +29,6 @@ namespace Geometry
             }
 
             Console.ReadLine();
-
-
-            // Square test
-
-            //Console.WriteLine($"Square Perimeter: {square.Perimeter()}");
-            //Console.WriteLine($"Square Area: {square.Area()}\n");
-
-            // Parallelogram test
-
-            //Console.WriteLine($"Parallelogram Perimeter: {parallelogram.Perimeter()}");
-            //Console.WriteLine($"Parallelogram Area: {parallelogram.Area()}\n");
-
-            // Trapez test
-
-            //Console.WriteLine($"Trapez Area: {trapez.Perimeter()}");
-            //Console.WriteLine($"Trapez Perimeter: {trapez.Area()}\n");
-
-
-            // Rectangle test
-
-            //Console.WriteLine($"Rectangle Perimeter: {rectangle.Perimeter()}");
-            //Console.WriteLine($"Rectangle Area: {rectangle.Area()}\n");
-
-            // Triangle test
-
-            //Console.WriteLine($"Triangle Perimeter: {triangle.Perimeter()}");
-            //Console.WriteLine($"Triangle Area: {triangle.Area()}\n");
-
         }
     }
 }
