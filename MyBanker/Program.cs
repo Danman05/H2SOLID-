@@ -2,15 +2,15 @@
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-           
+
             Random random = new();
             string chosenName = "";
             int age;
 
             // Random names produced from randomlists.com
-            List<string> randomNames = new List<string>()
+            List<string> randomNames = new()
             {
                 "Guillermo Edwards",
                 "Donovan Ritter",

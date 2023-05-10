@@ -8,10 +8,10 @@ namespace MyBanker
         protected const int BankPrefix = 3520;
 
         // Card information
-        protected string cardHolderName;
+        protected string? cardHolderName;
         protected int age;
-        protected string cardnumber;
-        protected string accountNumber;
+        protected string? cardnumber;
+        protected string? accountNumber;
         protected int cardPrefix;
 
         private Random random = new Random();
