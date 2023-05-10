@@ -5,14 +5,6 @@ namespace Geometry
     public class Square : Shape
     {
 
-        private double a;
-
-        public double A
-        {
-            get { return a; }
-            set { a = value; }
-        }
-
         // Constructor
         // Passes a and name to base constructor
         public Square(double a, string name) : base(a, name)
@@ -21,12 +13,12 @@ namespace Geometry
 
         public override double Perimeter()
         {
-            return base.A * 4;
+            return A * 4;
         }
 
         public override double Area()
         {
-            return base.A * base.A;
+            return A * A;
         }
     }
 }
