@@ -14,6 +14,7 @@ namespace CoffeeMachinePartThree
             {
                 Console.WriteLine("1. Brew Coffee\n" +
                     "2. Brew Tea\n" +
+                    "3. Brew Espresso\n" +
                     "0. Leave machine");
                 cki = Console.ReadKey();
 
