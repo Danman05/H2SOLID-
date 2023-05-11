@@ -3,13 +3,20 @@ namespace OpenCloseCoffeeMachine
 {
     public class CoffeeMachine : Machine
     {
-        private WaterTank waterTank;
-        private CoffeeFilter coffeeFilter;
 
-        public CoffeeMachine() 
+        private static WaterTank WaterTank = new();
+        private static CoffeeFilter CoffeeFilter = new();
+
+        public string Brew(object drink)
         {
-            this.waterTank = new WaterTank();
-            this.coffeeFilter = new CoffeeFilter();
+
+            return $"{WaterTank.AddWater()}\n" +
+                $"{CoffeeFilter.AddFilter()}\n" +
+                $"{PowerOn()}\n" +
+                $"{drink} is being brewed\n" +
+                $"{WaterTank.RemoveWaterByBrewing(CoffeeFilter.Coffee.WaterRequiredToBrew)}\n" +
+                $"{PowerOff()}\n" +
+                $"{CoffeeFilter.RemoveFilter()}";
         }
     }
 }
