@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalHierarchy", "AnimalHi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBanker", "MyBanker\MyBanker.csproj", "{4628D3EF-AFAC-4A5B-BEAE-7C353E54DAD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleResponsability", "SingleResponsability\SingleResponsability.csproj", "{529B783C-EB7D-4B0C-9C53-E85D7B0B3BD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleResponsability", "SingleResponsability\SingleResponsability.csproj", "{529B783C-EB7D-4B0C-9C53-E85D7B0B3BD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCloseCoffeeMachine", "OpenCloseCoffeeMachine\OpenCloseCoffeeMachine.csproj", "{8F817CB7-6B28-4FC1-855A-B15B55F8E414}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenCloseCoffeeMachine", "OpenCloseCoffeeMachine\OpenCloseCoffeeMachine.csproj", "{8F817CB7-6B28-4FC1-855A-B15B55F8E414}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMachinePartTwo", "CoffeeMachinePartTwo\CoffeeMachinePartTwo.csproj", "{5E9CFB49-9B1F-486B-B5CC-502EB103B73A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8F817CB7-6B28-4FC1-855A-B15B55F8E414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F817CB7-6B28-4FC1-855A-B15B55F8E414}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F817CB7-6B28-4FC1-855A-B15B55F8E414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E9CFB49-9B1F-486B-B5CC-502EB103B73A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E9CFB49-9B1F-486B-B5CC-502EB103B73A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E9CFB49-9B1F-486B-B5CC-502EB103B73A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E9CFB49-9B1F-486B-B5CC-502EB103B73A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
