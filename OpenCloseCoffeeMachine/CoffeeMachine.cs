@@ -4,8 +4,8 @@ namespace OpenCloseCoffeeMachine
     public class CoffeeMachine : Machine
     {
 
-        private static WaterTank WaterTank = new();
-        private static CoffeeFilter CoffeeFilter = new();
+        private WaterTank WaterTank = new WaterTank();
+        private CoffeeFilter CoffeeFilter = new CoffeeFilter();
 
         public string Brew(object drink)
         {

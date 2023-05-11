@@ -2,10 +2,10 @@
 
 namespace OpenCloseCoffeeMachine
 {
-    public class CoffeeFilter : CoffeeMachine
+    public class CoffeeFilter
     {
 
-        private static Coffee coffee = new();
+        private Coffee coffee = new Coffee();
 
         public Coffee Coffee
         {

@@ -10,7 +10,7 @@
 
             while (programIsAlive)
             {
-                Console.WriteLine("1. Brew Coffee\n +" +
+                Console.WriteLine("1. Brew Coffee\n" +
                     "0. Leave machine");
                 cki = Console.ReadKey();
 

@@ -1,7 +1,7 @@
 ﻿
 namespace OpenCloseCoffeeMachine
 {
-    public class WaterTank : CoffeeMachine
+    public class WaterTank
     {
         private int currentCapacity;
         private int maxCapacity;
