@@ -1,4 +1,6 @@
-﻿namespace BirdsFlyingAround
+﻿using BirdsFlyingAround.Birds;
+
+namespace BirdsFlyingAround
 {
     public class Program
     {

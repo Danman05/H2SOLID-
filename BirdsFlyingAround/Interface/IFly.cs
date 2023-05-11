@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BirdsFlyingAround
+namespace BirdsFlyingAround.Interface
 {
-    public interface IBirdFly
+    public interface IFly
     {
-        void Fly();
+        void SetAltiude(double altiude);
     }
 }
