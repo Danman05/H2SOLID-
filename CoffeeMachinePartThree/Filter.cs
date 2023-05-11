@@ -2,7 +2,7 @@
 
 namespace CoffeeMachinePartThree
 {
-    public class CoffeeFilter
+    public class Filter
     {
 
         private Coffee coffee = new Coffee();

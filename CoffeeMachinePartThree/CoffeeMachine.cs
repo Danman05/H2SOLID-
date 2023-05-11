@@ -4,19 +4,19 @@ namespace CoffeeMachinePartThree
     public class CoffeeMachine : Machine
     {
 
-        private WaterTank WaterTank = new WaterTank();
-        private CoffeeFilter CoffeeFilter = new CoffeeFilter();
+        private WaterTank waterTank = new WaterTank();
+        private Filter coffeeFilter = new Filter();
 
         public string Brew(object drink)
         {
 
-            return $"{WaterTank.AddWater()}\n" +
-                $"{CoffeeFilter.AddFilter()}\n" +
+            return $"{waterTank.AddWater()}\n" +
+                $"{coffeeFilter.AddFilter()}\n" +
                 $"{PowerOn()}\n" +
                 $"{drink} is being brewed\n" +
-                $"{WaterTank.RemoveWaterByBrewing(CoffeeFilter.Coffee.WaterRequiredToBrew)}\n" +
+                $"{waterTank.RemoveWaterByBrewing(coffeeFilter.Coffee.WaterRequiredToBrew)}\n" +
                 $"{PowerOff()}\n" +
-                $"{CoffeeFilter.RemoveFilter()}";
+                $"{coffeeFilter.RemoveFilter()}";
         }
     }
 }

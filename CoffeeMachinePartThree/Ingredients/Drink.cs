@@ -1,5 +1,6 @@
 ﻿namespace CoffeeMachinePartThree.Ingredients
 {
+    // Drink class
     public abstract class Drink
     {
         private int waterRequiredToBrew;
@@ -10,6 +11,7 @@
             set { waterRequiredToBrew = value; }
         }
 
+        // Constructor
         public Drink(int waterRequiredToBrew)
         {
             this.waterRequiredToBrew = waterRequiredToBrew;

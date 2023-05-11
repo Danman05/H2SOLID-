@@ -1,5 +1,6 @@
 ﻿namespace CoffeeMachinePartThree.Ingredients
 {
+    // Coffee derives from Drink and adds an property (waterRequiredToBrewCoffee)
     public class Coffee : Drink
     {
 
