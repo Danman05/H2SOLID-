@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeMachinePartTwo", "Cof
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeMachinePartThree", "CoffeeMachinePartThree\CoffeeMachinePartThree.csproj", "{61AB6BD9-BF02-4889-901F-42AB91A6BED8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdsFlyingAround", "BirdsFlyingAround\BirdsFlyingAround.csproj", "{21D3C667-6F38-4EA9-B4E3-FB98584153E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirdsFlyingAround", "BirdsFlyingAround\BirdsFlyingAround.csproj", "{21D3C667-6F38-4EA9-B4E3-FB98584153E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface Segregation", "Interface Segregation\Interface Segregation.csproj", "{7535F2D7-93B0-4534-8F0D-ED075B0C5B04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface Segregation", "Interface Segregation\Interface Segregation.csproj", "{7535F2D7-93B0-4534-8F0D-ED075B0C5B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPart1", "WebPart1\WebPart1.csproj", "{A3567273-947A-4564-83BB-3B57AF15B559}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{7535F2D7-93B0-4534-8F0D-ED075B0C5B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7535F2D7-93B0-4534-8F0D-ED075B0C5B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7535F2D7-93B0-4534-8F0D-ED075B0C5B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3567273-947A-4564-83BB-3B57AF15B559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3567273-947A-4564-83BB-3B57AF15B559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3567273-947A-4564-83BB-3B57AF15B559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3567273-947A-4564-83BB-3B57AF15B559}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
